@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website</title>
+</head>
+<style>
+    * {
+margin: 0;
+padding: 0;
+}
+.container {
+max-width: 1140px;
+margin-left: auto;
+margin-right: auto;
+}
+.row {
+display: flex;
+max-width: 100%;
+flex-wrap: wrap;
+margin-left: -20px;
+margin-right: -20px;
+}
+header {
+background-color: #FA8258;
+padding: 10px 0 10px 0;
+}
+a:hover {
+color: black;
+
+}
+a {
+text-decoration: none;
+font-size: 20px;
+
+}
+p {
+margin: 10px 0 10px 0;
+
+}
+.title h3 {
+
+font-size: 32px;
+text-decoration: underline;
+color: rgba(245,40,50,1);
+}
+.col-2 {
+flex: 0 0 16.666667%;
+max-width: 16.666667%;
+}
+.col-3 {
+flex: 0 0 25%;
+max-width: 25%;
+}
+.col-8 {
+flex: 0 0 66.666667%;
+max-width: 66.666667%;
+}
+.col-2th {
+flex: 0 0 20%;
+max-width: 20%;
+}
+.col-12 {
+flex: 0 0 100%;
+max-width: 100%;
+}
+.menu ul li {
+
+float: left;
+margin-left: 20px;
+list-style: none;
+
+}
+.menu {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+ul.menu_child {
+position: absolute;
+width: 225px;
+background-color: #FA8258;
+z-index: 9999;
+
+}
+ul.menu_child li {
+padding: 15px 0 0 0 ;
+float: none;
+display: none;
+}
+.menu ul li:hover ul.menu_child li {
+display: block;
+}
+    .mySlides {
+        display: none;
+    }
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: unset;
+    }
+    img {
+        vertical-align: middle;
+    }
+    .prev , .next{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bolder;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    .next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.prev, .next,.text {font-size: 11px}
+}
+/*end slider*/
+.slider-margin {
+margin-top: 20px;
+}
+.image img {
+width: 90%;
+}
+.card {
+margin-bottom: 20px;
+}
+footer {
+display: block;
+background-color: rgba(236, 245, 242, 0.8);
+padding: 20px 0 10px 0;
+}
+ul.menu_footer li {
+list-style: none;
+display: inline-block;
+}
+.footer {
+padding-bottom: 20px;
+
+}
+.footer h3 {
+color: rgba(100,255,10,1);
+}
+.copy_right {
+padding: 10px 0 0px 0;
+text-align: center;
+border-top: 1px solid #fff;
+}
+.sticky-top {
+position: sticky;
+top: 0;
+z-index: 1;
+}
+ .name>span{
+	border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    margin-right: 5px;
+    padding: 4px 5px;
+    white-space: nowrap
+}
+.giacu {
+    font-weight: bold;}
+	i {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+body{
+	margin: 0;
+	border: 1px;
+}
+.view-more a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    line-height: 40px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    border-radius: 4px;
+    margin: 10px auto;
+    width: 340px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+}
+</style>
+<body>
+	<header class="sticky-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-2 menu">
+					<img src="./logo.png">
+				</div>
+				<div class="col-2">
+				</div>
+				<div class="col-8 menu">
+					<ul>
+						<li><a href="">Trang chủ</a></li>
+						<li><a href="">Sản phẩm</a>
+							<ul class="menu_child">
+								<li><a href="https://www.thegioididong.com/dtdd">Điện Thoại</a></li>
+								<li><a href="https://www.thegioididong.com/may-tinh-bang">Tablet</a></li>
+								<li><a href="https://www.thegioididong.com/phu-kien">Phụ Kiện</a></li>
+								<li><a href="https://www.thegioididong.com/dong-ho">Đồng Hồ</a></li>
+								<li><a href="https://www.thegioididong.com/may-doi-tra/">Máy Cũ Giá rẻ</a></li>
+							</ul>
+						</li>
+						<li><a href="https://hoainam26.github.io/Nam1/">Góp ý</a></li>	
+						<li><a href="https://hoainam26.github.io/dangnhap/"> Đăng Nhập</a></li>
+						<li><a href="https://hoainam26.github.io/dangky/">Đăng ký</a></li>
+						<li><a href="https://www.thegioididong.com/cart"><img src="./anh11.png" style="
+						width: 35px;
+						height: 35px;" ></a></li>
+							<li><input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." /></li>
+							<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+							<li></li>
+					</ul>
+			</div>
+                    </div>
+		</div>
+		
+	</header>
+	<div class="container slider-margin">
+		<div class="row">
+			<div class="col-12">
+					<div class="slideshow-container">
+		<div class="mySlides fade">
+			<div class="numbertext">
+				1/3
+			</div>
+			<img src="./logo1.png" style="width: 100%;">
+			<div class="text">Caption</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">
+				2/3
+			</div>
+			<img src="./logo2.png" style="width: 100%;">
+			<div class="text">Caption</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">
+				3/3
+			</div>
+			<img src="./logo3.png" style="width: 100%;">
+			<div class="text">Caption</div>
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br>
+	<div style="text-align: center;">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot"onclick="currentSlide(3)"></span>
+	</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 title">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2th">
+					<div class="card">
+						<div class="image">
+							<img src="./anh2.jpg">
+						</div>
+						<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/oppo-reno8-t-5g-256gb	">OPPO Find N2 Flip 5G</a></h3>
+						<span>Chính 6.8" &amp; Phụ 3.26"</span>
+						</div>
+						<div class="price">
+							<p class="giacu">Giá bán cũ: <s>7.500.000 VNĐ</s></p>
+                            <i>Giá bán: 6.300.000 VNĐ</i><br>
+                            <a href="https://www.thegioididong.com/dtdd/oppo-find-n2-flip"><input type="submit" value="Đặt hàng"></a>
+						</div>
+					</div>
+				</div>
+						<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh3.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/iphone-14-pro-max#2-gia">iPhone 14 Pro Max</a></h3>
+						<span>6.7"</span>
+						<span>Super Retina XDR</span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>29.990.000</s></p>
+                            <i>Giá bán: 26.450.000</i><br>
+							<a href="https://www.thegioididong.com/dtdd/iphone-14-pro-max#2-gia"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+						<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="anh1.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/samsung-galaxy-a24">Samsung Galaxy A24</a></h3>
+						<span>6.5"</span>
+						<span>Full HD+</span>
+						<span>6GB</span>
+						<span>8GB</span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>6.490.000</s></p>
+						<i>Giá bán: 6.190.000 VNĐ</i><br>
+						<a href="https://www.thegioididong.com/dtdd/samsung-galaxy-a24-8gb"><input type="submit" value="Đặt hàng"></a>
+						
+					</div>
+				</div>
+			</div>
+						<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh4.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/iphone-14-pro#2-gia">iPhone 14 Pro</a></h3>
+						<span>6.1"</span>
+						<span>Super Retina XDR</span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>27.990.000</s></p>
+						<i>Giá bán: 24.990.000 VNĐ</i><br>
+						<a href="https://www.thegioididong.com/dtdd/iphone-14-pro#2-gia"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+						<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="anh5.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/samsung-galaxy-s21-fe-6gb">Samsung Galaxy S21 FE 5G</a></h3>
+						<span>6.4"</span>
+						<span>Full HD+</span>
+						<span>6GB - 128GB</span>
+						<span>8GB - 128GB</span>
+						<span>8GB - 256GB</span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>12.990.000</s></p>
+						<i>Giá bán: 9.990.000</i><br>
+						<a href="https://www.thegioididong.com/dtdd/samsung-galaxy-s21-fe-6gb"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+						<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh6.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/xiaomi-redmi-12c-64gb">Xiaomi Redmi 12C</a></h3>
+						<span>6.71"</span>
+						<span>HD+</span>
+						<span>64GB</span>
+						<span>128GB</span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>3.590.000</s></p>
+						<i>Giá bán: 2.990.000</i><br>
+						<a href="https://www.thegioididong.com/dtdd/xiaomi-redmi-12c-64gb"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+						<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh7.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/oppo-reno8-t-5g-256gb">OPPO Reno8 T 5G</a></h3>
+						<span>6.7"</span>
+						<span> Full HD+</span>
+						<span>8GB-256GB</span>
+						<span>8GB-128GB</span>
+					</div>
+					<div class="price">
+						<i>Giá bán: 10.990.000</i><br>
+						<a href="https://www.thegioididong.com/dtdd/oppo-reno8-t-5g-256gb"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+						<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh8.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/realme-c55-8gb#2-gia">realme C55</a></h3>
+						<span>6.7"</span>
+						<span>Full HD+</span>
+						<span>8GB-256GB</span>
+						<Span>8GB-128GB</Span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>4.990.000</s></p>
+						<i>Giá bán: 4.590.000</i><br>
+						<a href="https://www.thegioididong.com/dtdd/realme-c55-8gb#2-gia"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+						<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh9.jpg">
+					</div>
+					<div class="name">
+					<H3><a href="https://www.thegioididong.com/dtdd/samsung-galaxy-s23-plus#2-gia">Samsung Galaxy S23+ Ultra 5G</a></H3>
+					<span>6.8"</span>
+					<span>	QuaHD+(2k+)</span>
+					<span>8GB-256GB</span>
+					<span>12GB-512GB</span>
+					<span><a href="">12GB-1T</a></span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>31.990.000</s></p>
+						<i>Giá bán: 26.990.000</i><br>
+						<a href="https://www.thegioididong.com/dtdd/samsung-galaxy-s23-plus#2-gia"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+						<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh10.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/iphone-14#2-gia">iPhone 14</a></h3>
+						<span>6.1"</span>
+						<span>Super Retina XDR</span>
+						<span>128GB</span>
+						<span>256GB</span>
+						<span>512GB</span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>21.990.000</s></p>
+						<i>Giá bán: 19.490.000</i><br>
+						<a href="https://www.thegioididong.com/dtdd/iphone-14#2-gia"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh12.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/oppo-reno8-t-5g-256gb">OPPO Reno8 T 5G</a></h3>
+						<span>6.7"</span>
+						<span>Full HD+</span>
+						<span>8GB-256GB</span>
+						<span>8GB-128GB</span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>11.990.000</s></p>
+						<i>Giá bán: 10.990.000</i><br>
+						<a href="https://www.thegioididong.com/dtdd/oppo-reno8-t-5g-256gb"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh13.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/iphone-14#2-gia">Samsung Galaxy A23</a></h3>
+						<span>6.6"</span>
+						<span>Full HD+</span>
+						<span>4GB</span>
+						<span>6GB</span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>5.690.000</s></p>
+						<i>Giá bán: 4.890.000</i><br>
+						<a href="https://www.thegioididong.com/dtdd/samsung-galaxy-a23#2-gia"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh14.jpeg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/iphone-14#2-gia">Samsung Galaxy S20 FE (8GB/256GB)</a></h3>
+						<span>6.5"</span>
+						<span>Full HD+</span>
+						
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>12.490.000</s></p>
+						<i>Giá bán: 9.490.000</i><br>
+						<a href="https://www.thegioididong.com/dtdd/samsung-galaxy-s20-fan-edition#2-gia"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh15.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/iphone-14#2-gia">iPhone 14 Plus</a></h3>
+						<span>6.7"</span>
+						<span>Super Retina XDR</span>
+						<span>128GB</span>
+						<span>256GB</span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>24.990.000</s></p>
+						<i>Giá bán: 21.890.000</i><br>
+						<a href="https://www.thegioididong.com/dtdd/iphone-14-plus"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-2th">
+				<div class="card">
+					<div class="image">
+						<img src="./anh16.jpg">
+					</div>
+					<div class="name">
+						<h3><a href="https://www.thegioididong.com/dtdd/iphone-14#2-gia">iPhone 13 mini 128GB</a></h3>
+						<span>5.4"</span>
+						<span>Super Retina XDR</span>
+						<span>128GB</span>
+						<span>256GB</span>
+						<span>512GB</span>
+					</div>
+					<div class="price">
+						<p class="giacu">Giá bán cũ: <s>18.990.000</s></p>
+						<i>Giá bán: 16.990.000</i><br>
+						<a href="https://www.thegioididong.com/dtdd/iphone-13-mini"><input type="submit" value="Đặt hàng"></a>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	<div class="view-more">
+		<a href="https://www.thegioididong.com/dtdd#c=42&o=17&pi=1">Xem thêm <span class="remain">85</span> Điện thoại</a>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row footer">
+				<div class="col-3">
+					<ul class="menu_footer">
+						<li><a href="https://www.thegioididong.com/tin-tuc/tat-tan-tat-ve-chuong-trinh-uu-dai-app-qua-tang-vip-link-tai-va-cach-su-dung-1481677#gioithieu">Tích điểm quà tặng Vip</a></li>
+						<li><a href="https://www.thegioididong.com/lich-su-mua-hang/dang-nhap">Lịch Sử Mua Hàng</a></li>
+						<li><a href="https://www.thegioididong.com/tra-gop/">Tìm hiểu về mua trả góp</a></li>
+						<li><a href="https://www.thegioididong.com/bao-hanh">Chính Sách bảo hành</a></li>
+
+					</ul>
+				</div>
+				<div class="col-3">
+					<ul class="menu_footer">
+						<li><a href="#">Tổng đài hỗ trợ:(Miễn phí gọi)</a></li>
+						<li><a href="#">Gọi mua:0985017003</a></li><br>
+
+						<li><a href="https://www.facebook.com/profile.php?id=100031205581606">Facebook</a></li>
+						<li><a href="https://myaccount.google.com/?hl=vi">Email:Hoainam2655@gmail.com</a></li>
+				</div>
+				<div class="col-3">
+					<ul class="menu_footer">
+						<li><a href="https://mwg.vn/">Giới Thiệu công ty(MWG)</a></li>
+						<li><a href="https://vieclam.thegioididong.com/">Tuyển Dụng</a></li><br>
+
+						<li><a href="file:///C:/Users/ACER/Downloads/Nguy%E1%BB%85n%20Ho%C3%A0i%20Nam/New%20folder/Li%C3%AAn%20h%E1%BB%87.html">Gửi góp ý -khiếu nại</a></li>
+						<li><a href="https://www.thegioididong.com/he-thong-sieu-thi-the-gioi-di-dong">Tìm Cửa Hàng</a></li>
+				</div>
+				<div class="col-3">
+					<ul class="menu_footer">
+						<a href="#"><h3 style="color:black"
+							> Website cùng tập đoàn</h3></a>
+						<li><a href="https://www.thegioididong.com/"><img src="./anh17.png" style="
+							width: 35px;
+							height: 35px;"></a></li>
+					<li><a href="https://www.dienmayxanh.com/"><img src="./anh18.png" style="
+						width: 35px;
+						height: 35px;"></a></li>
+						<li><a href="https://www.topzone.vn/"><img src="./anh19.png" style="
+							width: 35px;
+							height: 35px;"></a></li>
+						<li><a href="https://www.dienmayxanh.com/"><img src="./anh20.png" style="
+							width: 35px;
+							height: 35px;"></a></li>
+							<li><a href="https://www.nhathuocankhang.com/"><img src="./anh21.png" style="
+								width: 35px;
+								height: 35px;"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 copy_right">
+				<ul>
+				
+				<li>© 2018. Công ty cổ phần Thế Giới Di Động. GPDKKD: 0985017003 do sở KH & ĐT TP.HN cấp ngày 02/01/2007. GPMXH: 238/GP-BTTTT do Bộ Thông Tin và Truyền Thông cấp ngày 04/06/2020.</li>
+					<li>Địa chỉ: Thạch xá-Thạch thất-Hà Nội. Email: cskh@Nam2605.com Chịu trách nhiệm nội dung: Nguyễn Hoài Nam</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	
+</body>
+<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		  dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += "active";
+	  setTimeout(showSlides, 1000);
+	}
+</script>
+</html>
